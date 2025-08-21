@@ -1,0 +1,98 @@
+/* Basic styling for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: #404040; /* Charcoal gray */
+    background-color: #F8F8F8; /* Light gray background */
+}
+
+/* Sidebar navigation styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #404040; /* Charcoal gray */
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #E6B0AA; /* Blush pink */
+    color: #404040;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 200px;
+    padding: 40px;
+}
+
+/* Section styling */
+section {
+    min-height: 100vh;
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #E6B0AA; /* Blush pink */
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Image styling */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.image-container img, #about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .sidebar a {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    section {
+        min-height: auto;
+    }
+}
